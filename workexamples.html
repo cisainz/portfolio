@@ -9,6 +9,12 @@
     <meta name="author" content="Your Name">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style/studentportfolio.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+
 </head>
 
 <body>
@@ -32,22 +38,550 @@
 
         <div id="WebProject" class="tabcontent">
               <h2>Web Project 1</h2>
+              
+              <p><a href="/portfolio/web-1/index_spacex.html">Space X Demo Site</a></p>
+              
               <h2>Web Project 2</h2>
         </div>
 
         <div id="Database" class="tabcontent">
               <h2>Database Project 1</h2>
+              
+              <p>Form Validation Example done in class:</p>
+              
+              <h3> Validate Form Project</h3>
+    <label class="formlabel">First name:</label>
+    <input type="text" name="firstname" size="30" maxlength="30" data-rule-required="true" data-rule-minimum="1" data-msg-required="Please enter name! If you don't have one, make it up!"><br>
+    <label class="formlabel">Middle Initial:</label>
+    <input type="text" name="MiddleInitial" size="1" maxlength="1"><br>
+   <label class="formlabel"> Last name:</label>
+    <input type="text" name="lastname" size="30" maxlength="30" data-rule-required="true" data-msg-required="Need that last name too!" ><br>
+    <label class="formlabel">Email:</label>
+    <input type="text" name"Email" size="30" maxlength="30" data-rule-required="true" data-msg-required="Can I get that email, bro?!"><br>
+    <label class="formlabel">Sex:</label>
+    <select name="Sex" id="Sex" data-rule-required="true" data-msg-required="Sex? Yes please! Hahaha...no but for real I need this info.">
+      <option value="">Select a Sex...</option>
+      <option value="Male">M</option>
+      <option value="Female">F</option>
+      <option value="Other">N</option>
+  </select><br>
+    <label class="formlabel">Birthday:</label>
+  <input type="text" name="Birthday" size="8" maxlength="8" id="Birthday" data-rule-required="true" data-msg-required="How am I gonna send a cake if you don't give me a date?" ><br>
+  <label class="formlabel" >Height:</label>
+  <input type="text" name="Height" size="3" maxlength="3" data-rule-required="true"><br>
+  <label class="formlabel">Weight:</label>
+  <input type="text" name"Weight" size="3" maxlength="3" data-rule-required="true"><br>
+ <label class="formlabel"> Marital Status:</label>
+  <select name="Marital Status" id="Marital Status" data-rule-required="true">
+    <option value="">Select a Marital Status...</option>
+    <option value="Single">S</option>
+    <option value="Married">M</option>
+    <option value="Divorced">D</option>
+    <option value="Lawfully Seperated">L</option>
+    <option value="Widowed">W</option>
+  </select><br>
+  <label class="formlabel">Phone:</label>
+    <input type="text" name"Phone" size="11" maxlength="11" data-rule-minimum="7" data-rule-required="True"  data-msg-required="*Can I have your number?!"><br>
+    <label class="formlabel">Address:</label>
+    <input type="text" name"Address" size="30" maxlength="30" data-rule-required="true"><br>
+    <label class="formlabel">City:</label>
+    <input type="text" name"City" size="30" maxlength="30" data-rule-required="true"><br>
+    <label class="formlabel">State:</label>
+    <select name="state" data-rule-required="true">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select><br>
+    <label class="formlabel">Zip:</label>
+    <input type="text" name"Zip" size="5" maxlength="5" data-rule-minimum="5" data-rule-required="true" data-rule-minimum="5" ><br>
+    <label class="formlabel">Taking Medications?:</label>
+    <select name="Taking Medications" id="Taking Medications" data-rule-required="true" data-msg-required="What are you on the meds now?! Insert this data!">
+      <option value="">Select a Yes or No...</option>
+      <option value="Yes">Y</option>
+      <option value="No">N</option>
+    </select><br>
+    <label class="formlabel">Medication List:</label>
+    <input type="text" name"Medication List" rows="3" col="30"><br>
+    <br>
+    <input class="button" type="submit" value="Submit" name="SelectButton">
+</form>
+
+
               <h2>Database Project 2</h2>
         </div>
 
         <div id="Programming" class="tabcontent">
               <h2>Programming Project 1</h2>
+              
+                   <p><a href="/portfolio/programming-2/programming2.html">Unit Conversion</a></p>
+              
+              <form id="UnitConversion" novalidate="novalidate">
+    <div class="formcontainer" onsubmit="return false">
+        <h1>Unit Conversion</h1>
+        <fieldset id="detail">
+             
+            <br>
+            
+            <label class="formlabel" for="FromValue">From: </label>
+            <input type="text" id="FromValue" name="FromValue" size="15" maxlength="15" data-rule-required="true" data-msg-required="From Value is Required" data-rule-number="true" data-msg-number="From Value must be a Number">
+            <label class="error" for="FromValue" id="FromValueError"></label>
+            <br><br>
+      
+            <label class="formlabel">From Unit: </label>
+                <label for="centimeters">
+                    <input type="radio" name="FromUnit" id="centimeters" value="cm" data-rule-required="true" data-msg-required="Unit is Required"  >cm
+                </label>
+                 <label for="meters">
+                    <input type="radio" name="FromUnit" id="meters" value="m">m
+                </label>
+                <label for="kilometers">
+                    <input type="radio" name="FromUnit" id="kilometers" value="km">km
+                </label>
+                <label for="inches">
+                    <input type="radio" name="FromUnit" id="inches" value="in">in
+                </label>
+                <label for="feet">
+                    <input type="radio" name="FromUnit" id="feet" value="ft">ft
+                </label>
+                <label for="yards">
+                    <input type="radio" name="FromUnit" id="yards" value="yd">yd
+                </label>
+                <label for="miles">
+                    <input type="radio" name="FromUnit" id="miles" value="mi">mi
+                </label>
+            <label for="FromUnit" class="error" id="FromUnitError"></label>
+            <br><br>
+            
+            
+            
+      
+
+          
+
+            <label class="formlabel">To Unit: </label>
+             <label for="Tocentimeters">
+                    <input type="radio" name="ToUnit" id="Tocentimeters" value="cm" data-rule-required="true" data-msg-required="Unit is Required"  >cm
+                </label>
+                 <label for="Tometers">
+                    <input type="radio" name="ToUnit" id="Tometers" value="m">m
+                </label>
+                <label for="Tokilometers">
+                    <input type="radio" name="ToUnit" id="Tokilometers" value="km">km
+                </label>
+                <label for="Toinches">
+                    <input type="radio" name="ToUnit" id="Toinches" value="in">in
+                </label>
+                <label for="Tofeet">
+                    <input type="radio" name="ToUnit" id="Tofeet" value="ft">ft
+                </label>
+                <label for="Toyards">
+                    <input type="radio" name="ToUnit" id="Toyards" value="yd">yd
+                </label>
+                <label for="Tomiles">
+                    <input type="radio" name="ToUnit" id="Tomiles" value="mi">mi
+                </label>
+            <label for="ToUnit" class="error" id="ToUnitError"></label>
+            <br><br>
+
+            <label class="formlabel">Result: </label>
+            <span id="ajaxresult"></span>
+            <br><br>
+
+            <input type="button" value="convert" name="convert" onclick="convertUnit();">
+            <input type="button" value="Clear" name="Clear" onclick="clearForm();" novalidate="">
+
+        </fieldset>
+    </div>
+</form>
+
+<script>
+  $("#UnitConversion").validate({
+
+    });
+
+  function convertUnit(){
+    
+    if ($("#UnitConversion").valid()) {
+
+
+
+/* URL for AJAX Call */
+var myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
+
+
+var myMethod = "POST";
+ var FromUnit;
+  var ToUnit;
+      
+
+   if (document.getElementById("centimeters").checked) {
+            FromUnit=document.getElementById("centimeters").value;     
+    }
+
+   if (document.getElementById("meters").checked) {
+            FromUnit=document.getElementById("meters").value;     
+    }
+
+     if (document.getElementById("kilometers").checked) {
+            FromUnit=document.getElementById("kilometers").value;     
+    }
+
+     if (document.getElementById("inches").checked) {
+            FromUnit=document.getElementById("inches").value;     
+    }
+
+     if (document.getElementById("feet").checked) {
+            FromUnit=document.getElementById("feet").value;     
+    }
+
+     if (document.getElementById("yards").checked) {
+            FromUnit=document.getElementById("yards").value;     
+    }
+
+     if (document.getElementById("miles").checked) {
+            FromUnit=document.getElementById("miles").value;     
+    }
+
+
+
+
+      if (document.getElementById("Tocentimeters").checked) {
+            ToUnit=document.getElementById("Tocentimeters").value;     
+    }
+
+   if (document.getElementById("Tometers").checked) {
+            ToUnit=document.getElementById("Tometers").value;     
+    }
+
+     if (document.getElementById("Tokilometers").checked) {
+            ToUnit=document.getElementById("Tokilometers").value;     
+    }
+
+     if (document.getElementById("Toinches").checked) {
+            ToUnit=document.getElementById("Toinches").value;     
+    }
+
+     if (document.getElementById("Tofeet").checked) {
+            ToUnit=document.getElementById("Tofeet").value;     
+    }
+
+     if (document.getElementById("Toyards").checked) {
+            ToUnit=document.getElementById("Toyards").value;     
+    }
+
+     if (document.getElementById("Tomiles").checked) {
+            ToUnit=document.getElementById("Tomiles").value;     
+    }
+
+      var myData = {};
+      
+      myData.FromValue=document.getElementById("FromValue").value;
+      myData.FromUnit= FromUnit;
+      myData.ToUnit= ToUnit;
+      
+      
+   
+
+$(document).ready(function(){
+      
+  
+
+    $.ajax({
+      method: myMethod,
+      data: myData,
+      url: myURL
+    })
+
+    /* AJAX complete - result is in msg */
+      .done(function( msg ) {
+            /* Your code to process the result goes here - 
+               display the returned message */          
+            document.getElementById("ajaxresult").innerHTML = msg;
+    });
+ 
+  });
+  
+  }
+  	}
+
+</script>
+              
+             
+             
+             
               <h2>Programming Project 2</h2>
+              
+               <p><a href="/portfolio/programming-1/programming.html">Currency Conversion</a></p>
+              
+              <form id="CurrencyConvert" novalidate="novalidate">
+  <div class="formcontainer" onsubmit="return false">
+    <h1>Currency Value History</h1>
+      <fieldset id="detail">
+          <br>
+          <label class="formlabel">Base Currency:</label>
+          <br>
+           <select name="FromValue" id="FromValue" data-rule-required="true">
+    <option value="">Select a Currency...</option>
+    <option value="$">US Dollar</option>
+    <option value="€">European Euro</option>
+    <option value="¥">Japanese Yen</option>
+    <option value="£">British Pound</option>
+    <option value="₩">South Korean Won</option>
+  </select>
+  <br>
+  <br>
+          <label class="formlabel">Convert to Currency:</label>
+          <br>
+          <select name="ToValue" id="ToValue" data-rule-required="true">
+    <option value="">Select a Currency...</option>
+    <option value="$">US Dollar</option>
+    <option value="€">European Euro</option>
+    <option value="¥">Japanese Yen</option>
+    <option value="£">British Pound</option>
+    <option value="₩">South Korean Won</option>
+  </select>
+  <br>
+  <br>
+          <label class="formlabel">From Date:</label>
+            <input type="date" id="FromDate" name="FromDate" size="10" maxlength="10" data-rule-required="true" data-msg-required="From Date is Required" data-rule-number="true" data-msg-number="From Date must be a valid date.">
+            <label class="error" for="FromDate" id="FromDateError"></label>
+      <br>
+          <label class="formlabel">To Date:</label>
+           <input type="date" id="ToDate" name="ToDate" size="10" maxlength="10" data-rule-required="true" data-msg-required="To Date is Required" data-rule-number="true" data-msg-number="To Date must be a valid date.">
+            <label class="error" for="ToDate" id="ToDateError"></label>
+          <br>
+
+      <label class="formlabel">Result: </label>
+            <span id="ajaxresult"></span>
+            <br><br>
+
+      <input type="button" value="convertCurrency" name="convertCurrency" onclick="convertCurrency();">
+      <input type="button" value="Clear" name="Clear" onclick="clearForm();" novalidate="">
+
+      </fieldset>
+<script>
+$("#CurrencyConvert").validate({
+
+    });
+
+  function convertCurrency(){
+    
+    if ($("#CurrencyConvert").valid()) {
+
+
+
+var myURL = "api.worldtradingdata.com/api/v1/forex_history?base="+ FromValue +"&convert_to="+ ToValue +"&date_from="+ FromDate +"&date_to="+ ToDate +"&api_token=YLHp9qddlcwkDDTwVbFuPDuOJCUpoi8ehCYk82wD4XQxb4nnVf6qCsRLsbsS";
+
+/* AJAX Method (POST or GET) */
+var myMethod = "GET";
+var FromValue;
+  var ToValue;
+
+  if (document.getElementById("$").checked) {
+            FromValue=document.getElementById("$").value;     
+    }
+
+  if (document.getElementById("€").checked) {
+            FromValue=document.getElementById("€").value;     
+    }
+
+  if (document.getElementById("¥").checked) {
+            FromValue=document.getElementById("¥").value;     
+    }
+
+  if (document.getElementById("£").checked) {
+            FromValue=document.getElementById("£").value;     
+    }
+
+  if (document.getElementById("₩").checked) {
+            FromValue=document.getElementById("₩").value;     
+    }
+
+
+
+ if (document.getElementById("$").checked) {
+            ToValue=document.getElementById("$").value;     
+    }
+
+  if (document.getElementById("€").checked) {
+            ToValue=document.getElementById("€").value;     
+    }
+
+  if (document.getElementById("¥").checked) {
+            ToValue=document.getElementById("¥").value;     
+    }
+
+  if (document.getElementById("£").checked) {
+            ToValue=document.getElementById("£").value;     
+    }
+
+  if (document.getElementById("₩").checked) {
+            ToValue=document.getElementById("₩").value;     
+    }
+
+ var myData = {};
+      
+      myData.FromDate=document.getElementById("FromDate").value;
+       myData.ToDate=document.getElementById("ToDate").value;
+    
+/* Make sure the document is ready */
+$(document).ready(function() { 
+
+    $.ajax({
+      method: myMethod,
+      url: myURL
+    })
+
+    
+      .done(function( msg ) {
+
+		
+			var dates = [];		
+			var values = [];
+
+			i = 0
+			
+			for (datekey in msg.history) {
+				dates[i] = datekey
+				
+  				values[i] = msg.history[datekey].close
+				i = i + 1
+			}
+
+			stocksymbol = "SNAP";
+
+			var ctx = document.getElementById("chartjs-0");
+			var myChart = new Chart(ctx, {
+			"type":"line",
+			"data": {
+				"labels": dates,
+				"datasets":[{"label": stocksymbol + " Value",
+				"data": values,
+				"fill":false,
+				"borderColor":"rgb(75, 192, 192)",
+				"lineTension":0.1}]},
+				"options":{ 
+					responsive: false,
+					maintainAspectRatio: true,
+					title: {
+						display: true,
+						text: "Value of " + stocksymbol + " Stock",
+						fontSize : 18
+					},
+					scales: {
+						xAxes: [{
+							type: 'time',
+							time: {
+									displayFormats: {
+									day: 'MMM D'
+								}
+							}
+						}],
+
+						yAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: stocksymbol
+							}
+						}]
+
+					}
+				}
+			}
+		);
+
+    });
+});
+ }
+  	}
+</script>  
+
+              
+         
+
+
         </div>
 
         <div id="SoftSkills" class="tabcontent">
               <h2>Soft Skills Project 1</h2>
-        </div>
+              
+              <h4>Blog 02: "Group Climate and Process"</h4>
+<br>
+<h6>01/30/20</h6>
+<br>
+<p>This past week we talked about some fundamentals for working on a project with a group. Cheryl used Pixar as an example, which I thought was a good choice seeing that it is possibly the most collaborative companies in the world.With the video pixar we saw how the environment where teams work effect communication. </p>
+<br>
+<p>What we mostly talked about this week is the fundamentals on how to be a good communicator on your team and what good communication can do for a team.</p>
+<br>
+<p>We went over what is a healthy group climate:</p>
+<br>
+  <ul>
+    <li><p><b>Openness</b> - Team members should never feel like they have to hold back their ideas and opinions. Memebers need to be transparent and feel free to ask questions in order to be effective and efficient.</p></li>
+    <li><p><b>Sef-Disclosure</b> - Members building personal connections with each other and no only talking about "business" helps builds bonds, and allows them to trust one another.</p></li>
+    <li><p><b>Support</b> - Members always being present in conversation and always lending a helping hand when available. </p></li>
+    <li><p><b>Respect</b> - Members must recognize that each person on the roster has their own experience and skills. Members must being open to learning from each other and letting each person do their part without micro-managing them.</p></li>
+    </ul>
+    <br>
+
+    <p>Along with effective communication and how to build a healthy climate, we also discussed the Group Process:</p>
+<br>
+  <ul>
+    <li><p><b>Accountabilty</b> - Members must be responsible for their actions and productivity. They must be sure to do their part for the project.</p></li>
+    <li><p><b>Constructive Feedback</b> - Members should feel free to give constructive criticism when it is warrented. Be sure to add some positive re-enforcement with your crtique. Point out bothe goods and the bads.</p></li>
+    <li><p><b>Problem Solve</b> - Makes sure to identify problems and include everyone on finding/deciding a solution.  </p></li>
+    <li><p><b>Knowledge of Roles</b> - It is important to collaborate and help other members out, but be sure that you are simply providing support and not just taking over. Allow everyone to do their part.</p></li>
+    </ul>
+
+       
+     </div>
+              
 
         <div id="Capstone" class="tabcontent">
               <h2>Capstone Project</h2>

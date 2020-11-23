@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="cs_style1.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+
+<script>
+  $("#UnitConversion").validate({
+
+    });
+
+  function convertUnit(){
+    
+    if ($("#UnitConversion").valid()) {
+
+
+
+/* URL for AJAX Call */
+var myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
+
+
+var myMethod = "POST";
+ var FromUnit;
+  var ToUnit;
+      
+
+   if (document.getElementById("centimeters").checked) {
+            FromUnit=document.getElementById("centimeters").value;     
+    }
+
+   if (document.getElementById("meters").checked) {
+            FromUnit=document.getElementById("meters").value;     
+    }
+
+     if (document.getElementById("kilometers").checked) {
+            FromUnit=document.getElementById("kilometers").value;     
+    }
+
+     if (document.getElementById("inches").checked) {
+            FromUnit=document.getElementById("inches").value;     
+    }
+
+     if (document.getElementById("feet").checked) {
+            FromUnit=document.getElementById("feet").value;     
+    }
+
+     if (document.getElementById("yards").checked) {
+            FromUnit=document.getElementById("yards").value;     
+    }
+
+     if (document.getElementById("miles").checked) {
+            FromUnit=document.getElementById("miles").value;     
+    }
+
+
+
+
+      if (document.getElementById("Tocentimeters").checked) {
+            ToUnit=document.getElementById("Tocentimeters").value;     
+    }
+
+   if (document.getElementById("Tometers").checked) {
+            ToUnit=document.getElementById("Tometers").value;     
+    }
+
+     if (document.getElementById("Tokilometers").checked) {
+            ToUnit=document.getElementById("Tokilometers").value;     
+    }
+
+     if (document.getElementById("Toinches").checked) {
+            ToUnit=document.getElementById("Toinches").value;     
+    }
+
+     if (document.getElementById("Tofeet").checked) {
+            ToUnit=document.getElementById("Tofeet").value;     
+    }
+
+     if (document.getElementById("Toyards").checked) {
+            ToUnit=document.getElementById("Toyards").value;     
+    }
+
+     if (document.getElementById("Tomiles").checked) {
+            ToUnit=document.getElementById("Tomiles").value;     
+    }
+
+      var myData = {};
+      
+      myData.FromValue=document.getElementById("FromValue").value;
+      myData.FromUnit= FromUnit;
+      myData.ToUnit= ToUnit;
+      
+      
+   
+
+$(document).ready(function(){
+      
+  
+
+    $.ajax({
+      method: myMethod,
+      data: myData,
+      url: myURL
+    })
+
+    /* AJAX complete - result is in msg */
+      .done(function( msg ) {
+            /* Your code to process the result goes here - 
+               display the returned message */          
+            document.getElementById("ajaxresult").innerHTML = msg;
+    });
+ 
+  });
+  
+  }
+  	}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<form id="UnitConversion" novalidate="novalidate">
+    <div class="formcontainer" onsubmit="return false">
+        <h1>Unit Conversion</h1>
+        <fieldset id="detail">
+             
+            <br>
+            
+            <label class="formlabel" for="FromValue">From: </label>
+            <input type="text" id="FromValue" name="FromValue" size="15" maxlength="15" data-rule-required="true" data-msg-required="From Value is Required" data-rule-number="true" data-msg-number="From Value must be a Number">
+            <label class="error" for="FromValue" id="FromValueError"></label>
+            <br><br>
+      
+            <label class="formlabel">From Unit: </label>
+                <label for="centimeters">
+                    <input type="radio" name="FromUnit" id="centimeters" value="cm" data-rule-required="true" data-msg-required="Unit is Required"  >cm
+                </label>
+                 <label for="meters">
+                    <input type="radio" name="FromUnit" id="meters" value="m">m
+                </label>
+                <label for="kilometers">
+                    <input type="radio" name="FromUnit" id="kilometers" value="km">km
+                </label>
+                <label for="inches">
+                    <input type="radio" name="FromUnit" id="inches" value="in">in
+                </label>
+                <label for="feet">
+                    <input type="radio" name="FromUnit" id="feet" value="ft">ft
+                </label>
+                <label for="yards">
+                    <input type="radio" name="FromUnit" id="yards" value="yd">yd
+                </label>
+                <label for="miles">
+                    <input type="radio" name="FromUnit" id="miles" value="mi">mi
+                </label>
+            <label for="FromUnit" class="error" id="FromUnitError"></label>
+            <br><br>
+            
+            
+            
+      
+
+          
+
+            <label class="formlabel">To Unit: </label>
+             <label for="Tocentimeters">
+                    <input type="radio" name="ToUnit" id="Tocentimeters" value="cm" data-rule-required="true" data-msg-required="Unit is Required"  >cm
+                </label>
+                 <label for="Tometers">
+                    <input type="radio" name="ToUnit" id="Tometers" value="m">m
+                </label>
+                <label for="Tokilometers">
+                    <input type="radio" name="ToUnit" id="Tokilometers" value="km">km
+                </label>
+                <label for="Toinches">
+                    <input type="radio" name="ToUnit" id="Toinches" value="in">in
+                </label>
+                <label for="Tofeet">
+                    <input type="radio" name="ToUnit" id="Tofeet" value="ft">ft
+                </label>
+                <label for="Toyards">
+                    <input type="radio" name="ToUnit" id="Toyards" value="yd">yd
+                </label>
+                <label for="Tomiles">
+                    <input type="radio" name="ToUnit" id="Tomiles" value="mi">mi
+                </label>
+            <label for="ToUnit" class="error" id="ToUnitError"></label>
+            <br><br>
+
+            <label class="formlabel">Result: </label>
+            <span id="ajaxresult"></span>
+            <br><br>
+
+            <input type="button" value="convert" name="convert" onclick="convertUnit();">
+            <input type="button" value="Clear" name="Clear" onclick="clearForm();" novalidate="">
+
+        </fieldset>
+    </div>
+</form>
+
+
+
+</body>
+</html>

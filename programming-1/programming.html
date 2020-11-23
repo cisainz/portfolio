@@ -7,6 +7,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
@@ -16,11 +18,52 @@
 
 
 
+<form id="CurrencyConvert" novalidate="novalidate">
+  <div class="formcontainer" onsubmit="return false">
+    <h1>Currency Value History</h1>
+      <fieldset id="detail">
+          <br>
+          <label class="formlabel">Base Currency:</label>
+          <br>
+           <select name="FromValue" id="FromValue" data-rule-required="true">
+    <option value="">Select a Currency...</option>
+    <option value="$">US Dollar</option>
+    <option value="€">European Euro</option>
+    <option value="¥">Japanese Yen</option>
+    <option value="£">British Pound</option>
+    <option value="₩">South Korean Won</option>
+  </select>
+  <br>
+  <br>
+          <label class="formlabel">Convert to Currency:</label>
+          <br>
+          <select name="ToValue" id="ToValue" data-rule-required="true">
+    <option value="">Select a Currency...</option>
+    <option value="$">US Dollar</option>
+    <option value="€">European Euro</option>
+    <option value="¥">Japanese Yen</option>
+    <option value="£">British Pound</option>
+    <option value="₩">South Korean Won</option>
+  </select>
+  <br>
+  <br>
+          <label class="formlabel">From Date:</label>
+            <input type="date" id="FromDate" name="FromDate" size="10" maxlength="10" data-rule-required="true" data-msg-required="From Date is Required" data-rule-number="true" data-msg-number="From Date must be a valid date.">
+            <label class="error" for="FromDate" id="FromDateError"></label>
+      <br>
+          <label class="formlabel">To Date:</label>
+           <input type="date" id="ToDate" name="ToDate" size="10" maxlength="10" data-rule-required="true" data-msg-required="To Date is Required" data-rule-number="true" data-msg-number="To Date must be a valid date.">
+            <label class="error" for="ToDate" id="ToDateError"></label>
+          <br>
 
+      <label class="formlabel">Result: </label>
+            <span id="ajaxresult"></span>
+            <br><br>
 
+      <input type="button" value="convertCurrency" name="convertCurrency" onclick="convertCurrency();">
+      <input type="button" value="Clear" name="Clear" onclick="clearForm();" novalidate="">
 
-
-
+      </fieldset>
 <script>
 $("#CurrencyConvert").validate({
 
@@ -156,7 +199,16 @@ $(document).ready(function() {
 });
  }
   	}
-</script>
+</script>  
+
+
+</div>
+</form>
+
+
+
+
+
 
 
 </body>

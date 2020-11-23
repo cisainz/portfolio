@@ -11,6 +11,7 @@ body {
 	margin-left: auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
+	bacground
 }
 
 p {
@@ -22,7 +23,7 @@ p {
 }	
 
 .img-style-1 {
-	float: left;
+	float: center;
 	margin-right: 10px;
     margin-bottom: 10px;
 	padding: 5px;
@@ -43,7 +44,7 @@ p {
 
 /* Style the buttons inside the tab */
 .tab button {
-    background-color:#252425;
+    background-color:#193446;
     float: left;
     border: none;
     outline: none;
@@ -52,16 +53,18 @@ p {
     transition: 0.3s;
     font-size: 16px;
     color: white;
+    text-align: center;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #555555;
+    background-color: ;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #555555;
+    background-color: #C5D2DB;
+    color: #193446;
 }
 
 /* Style the tab content */
@@ -70,7 +73,7 @@ p {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-    background-color: #AFAFAF;
+    background-color: #EBECED;
 }
 
 .tabcontent {
@@ -85,5 +88,23 @@ p {
 
 
 .titles {
-    color:#F15B52;
+    color:#193446;
+}
+
+
+.blog-post{
+  padding-left:20px;
+  padding-right: 20px;
+  font-family:arial, sans-serif;
+  text-decoration: none;
+ 
+}
+
+.blog-post p{
+  font-size:12px;
+  font-style:normal;
+ 
+  font-family:arial, sans-serif;
+  text-decoration: none;
+  line-height: 150%;
 }
