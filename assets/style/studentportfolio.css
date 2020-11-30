@@ -92,7 +92,7 @@ p {
 }
 
 
-.blog-post{
+/*.blog-post{
   padding-left:20px;
   padding-right: 20px;
   font-family:arial, sans-serif;
@@ -107,9 +107,30 @@ p {
   font-family:arial, sans-serif;
   text-decoration: none;
   line-height: 150%;
-}
+}*/
 
 .bio-pic {
     padding-left: 10px;
     padding-right:20px;
+}
+
+.tabcontent img {
+    padding-left:40px;
+    padding-bottom: 20px;
+}
+
+.tabcontent p {
+    padding-left:20px;
+}
+
+.tabcontent h2 {
+    padding-left:20px;
+}
+
+.tabcontent h3 {
+    padding-left:20px;
+}
+
+.tabcontent h4 {
+    padding-left:20px;
 }
