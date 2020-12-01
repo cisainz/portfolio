@@ -141,7 +141,6 @@ p {
 
 .container {
     padding-left: 10px;
-    padding-right: 40px;
     padding-bottom: 20px;
     height: 400px;
 }
@@ -151,4 +150,12 @@ p {
     padding-right: 40px;
     padding-bottom: 20px;
     height: 400px;
+}
+
+.container p {
+    padding-right: 40px;
+}
+
+.container2 p {
+    padding-right: 40px;
 }
