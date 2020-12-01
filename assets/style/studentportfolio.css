@@ -141,12 +141,14 @@ p {
 
 .container {
     padding-left: 10px;
+    padding-right: 20px;
     padding-bottom: 20px;
     height: 400px;
 }
 
 .container2 {
     padding-left: 10px;
+    padding-right: 20px;
     padding-bottom: 20px;
     height: 400px;
 }
